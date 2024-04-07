@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BookItem from "./BookItem";
+import "./Show.css"
 
 // eslint-disable-next-line react/prop-types
 export default function Show({books,onDeleteItem}){
@@ -40,14 +41,14 @@ export default function Show({books,onDeleteItem}){
     }
     // eslint-disable-next-line react/prop-types
     return (
-        <div>
-            <div>
-                <h2>Search</h2>
-                <label htmlFor="search" >Search</label>
+        <div className="mainShowBlock">
+            <div className="searchBlock">
+                
+                <label className="formItem" htmlFor="search" >Search</label>
                 <input type="text" id="search" value={searchString} onChange={handlerSearchString}/>
 
                 
-                <label htmlFor="property" >Property</label>
+                <label className="formItem" htmlFor="property" >Property</label>
                 <select id="property" value={selectedBookProperty} onChange={handlerSelectBookProperty}>
                     <option value="title">Title</option>
                     <option value="author">Author</option>
@@ -57,8 +58,8 @@ export default function Show({books,onDeleteItem}){
                 </select>
 
              </div>
-            <ul>
+            <div className="showBlock">
             {filterBooks.map((i)=><BookItem key={++k} id={i.id} title={i.title} author={i.author} genre={i.genre} pages={i.pages} review={i.review} onDelete={handlerDelete} />)}
-            </ul>
+            </div>
         </div>)
 }

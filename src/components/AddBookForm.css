@@ -1,0 +1,17 @@
+.addForm{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #7a7979;
+    margin: 5px;
+}
+.formError{
+    margin: 0px;
+    
+}
+.createButton{
+    background-color: goldenrod;
+    margin: 5px;
+}
+.formItem{
+    margin: 5px;
+}

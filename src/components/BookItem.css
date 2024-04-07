@@ -1,0 +1,15 @@
+.book{
+    
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.deleteButton{
+    background-color: brown;
+}
+
+.bookProperty{
+    margin: 6px;
+}
